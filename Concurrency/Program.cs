@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Concurrency.Collections;
 using Concurrency.Multithreading;
 using Concurrency.Parallelism;
 
@@ -13,7 +14,7 @@ namespace Concurrency
     {
         static void Main(string[] args)
         {
-            IExample example = new UsingParallel();
+            IExample example = new UsingThreadSafe();
             example.Run();
             Console.WriteLine("Example runned");
         
