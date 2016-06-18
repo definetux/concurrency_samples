@@ -49,6 +49,7 @@
     <Compile Include="Multithreading\UsingThread.cs" />
     <Compile Include="Multithreading\UsingThreadPool.cs" />
     <Compile Include="Multithreading\UsingTimers.cs" />
+    <Compile Include="Parallelism\UsingParallel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

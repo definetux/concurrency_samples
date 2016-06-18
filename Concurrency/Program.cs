@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Concurrency.Multithreading;
+using Concurrency.Parallelism;
 
 namespace Concurrency
 {
@@ -12,7 +13,7 @@ namespace Concurrency
     {
         static void Main(string[] args)
         {
-            IExample example = new UsingSynchronization();
+            IExample example = new UsingParallel();
             example.Run();
             Console.WriteLine("Example runned");
         
