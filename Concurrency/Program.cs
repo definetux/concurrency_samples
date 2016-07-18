@@ -14,7 +14,7 @@ namespace Concurrency
     {
         static void Main(string[] args)
         {
-            IExample example = new UsingThreadSafe();
+            IExample example = new UsingBlockingCollection();
             example.Run();
             Console.WriteLine("Example runned");
         

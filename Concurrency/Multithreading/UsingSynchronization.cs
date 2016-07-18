@@ -9,7 +9,7 @@ namespace Concurrency.Multithreading
         private readonly object _lock = new object();
 
         private readonly Mutex _mutex = new Mutex();
-        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1);
+        private readonly AutoResetEvent _mre = new AutoResetEvent(true); 
 
         public void Run()
         {
@@ -30,7 +30,7 @@ namespace Concurrency.Multithreading
             Console.WriteLine($"{threadName} is entered");
 
             //lock(_lock)
-            _semaphore.Wait();
+            _mre.WaitOne();
             {
                 Console.WriteLine($"{threadName} does long work");
 
@@ -43,7 +43,7 @@ namespace Concurrency.Multithreading
                     throw new InvalidOperationException("Synchronizarion failed");
                 }
             }
-            _semaphore.Release();
+            _mre.Set();
 
             Console.WriteLine($"{threadName} is left");
         }

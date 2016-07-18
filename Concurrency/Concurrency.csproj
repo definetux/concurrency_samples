@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\UsingBlockingCollection.cs" />
     <Compile Include="Collections\UsingImmutable.cs" />
     <Compile Include="Collections\UsingThreadSafe.cs" />
     <Compile Include="IExample.cs" />

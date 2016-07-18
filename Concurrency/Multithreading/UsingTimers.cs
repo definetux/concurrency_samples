@@ -12,6 +12,8 @@ namespace Concurrency.Multithreading
             timer.Start();
 
             var otherTimer = new System.Threading.Timer(TimersCallback, null, 0, 1000);
+            // описать disposing таймеров
+            // продлевание таймеров изнутри (наложение тиков)
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)

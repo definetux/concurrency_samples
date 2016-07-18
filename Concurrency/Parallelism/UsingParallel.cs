@@ -46,7 +46,7 @@ namespace Concurrency.Parallelism
         private void TaskParallelism()
         {
             Parallel.Invoke(
-                () => Console.WriteLine($"Count of goats: {new Regex("goat").Matches(Text).Count}"),
+                () => Console.WriteLine($"Count of goats: {Regex.Matches(Text, "goat").Count}"),
                 () => Console.WriteLine($"Count of bridges: {new Regex("bridge").Matches(Text).Count}"),
                 () => Console.WriteLine($"Count of saids: {new Regex("said").Matches(Text).Count}"),
                 () => Console.WriteLine($"Count of rivers: {new Regex("river").Matches(Text).Count}"));
