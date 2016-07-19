@@ -11,10 +11,13 @@ namespace Concurrency.Parallelism
 
         public void Run()
         {
+            Console.WriteLine("-- Data parallelism --");
             DataParallelism();
 
+            Console.WriteLine("-- Task parallelism --");
             TaskParallelism();
 
+            Console.WriteLine("-- PLinq --");
             PLinq();
         }
 
@@ -27,7 +30,6 @@ namespace Concurrency.Parallelism
                 var goatCount = GoatCount(processedSentence);
                 Console.WriteLine($"Sentence: {processedSentence}.\nGoat found {goatCount} times");
             });
-            Console.WriteLine();
         }
 
         private static int GoatCount(string processedSentence)

@@ -29,8 +29,7 @@ namespace Concurrency.Multithreading
         {
             Console.WriteLine($"{threadName} is entered");
 
-            //lock(_lock)
-            _mre.WaitOne();
+            lock (_lock) // _mre.WaitOne(); // _mutex.WaitOne();
             {
                 Console.WriteLine($"{threadName} does long work");
 
@@ -43,7 +42,7 @@ namespace Concurrency.Multithreading
                     throw new InvalidOperationException("Synchronizarion failed");
                 }
             }
-            _mre.Set();
+            //_mre.Set(); //_mutex.ReleaseMutex();
 
             Console.WriteLine($"{threadName} is left");
         }
